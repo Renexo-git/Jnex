@@ -1,0 +1,11 @@
+iframe,
+datagrid,
+column {
+  display: block;
+}
+
+#calendar .day,
+#calendar .dow,
+#calendar .dummy-day {
+  display: inline-block;
+}

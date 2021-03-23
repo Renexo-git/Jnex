@@ -1,0 +1,17 @@
+#calendar .day,
+#calendar .dow,
+#calendar .dummy-day,
+#calendar .month {
+  float: left;
+}
+
+#calendar .day,
+#calendar .dow,
+#calendar .dummy-day,
+#calendar .month h4 {
+  text-align: center;
+}
+
+#calendar .month {
+  position: relative;
+}

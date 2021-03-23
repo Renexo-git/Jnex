@@ -1,0 +1,11 @@
+.bg-image,
+.bg-image-fixed {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.bg-image-fixed,
+.bg-dot {
+  background-attachment: fixed !important;
+}
