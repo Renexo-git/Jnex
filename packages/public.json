@@ -1,0 +1,17 @@
+{
+  "dependencies": [
+    "@ericblade/quagga2",
+    "@fortawesome/fontawesome-free",
+    "@popperjs/core",
+    "bootbox",
+    "bootstrap",
+    "chart.js",
+    "codemirror",
+    "highlight.js",
+    "jquery",
+    "prismjs",
+    "runtime-memcache",
+    "summernote",
+    "tabulator-tables"
+  ]
+}
