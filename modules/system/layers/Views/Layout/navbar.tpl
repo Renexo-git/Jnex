@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg p-3 fixed-top border-bottom shadow navbar-dark bg-master">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><i class="fa fa-home"></i> <%= i18n("Home") %></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-cubes"></i> <%= i18n("Modules") %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item ajax" href="/demo/datagrid"><%= i18n("Demo") %></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-tools"></i> <%= i18n("Tools") %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item ajax" href="/system/calculator"><%= i18n("Calculator") %></a>
+          <a class="dropdown-item ajax" href="/system/calendar"><%= i18n("Calendar") %></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-cog"></i> <%= i18n("Settings") %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item ajax" href="/system/change_password"><%= i18n("Change password") %></a>
+          <a class="dropdown-item ajax" href="/system/manage_users"><%= i18n("Manage users") %></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item ajax" href="/system/info"><%= i18n("Modules") %></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-info-circle"></i> <%= i18n("Information") %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item ajax" href="/system/status"><%= i18n("Status") %></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item ajax" href="/system/about"><%= i18n("About") %></a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link ajax" href="/system/exit"><i class="fa fa-sign-out-alt"></i> <%= i18n("Exit") %></a>
+      </li>
+    </ul>
+  </div>
+</nav>
