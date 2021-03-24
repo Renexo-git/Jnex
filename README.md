@@ -67,5 +67,5 @@ server {
 
 *root@user:/home/user#* **/etc/init.d/nginx restart**
 
-### All ready
+### :+1: All ready
 **http://localhost:8080**
