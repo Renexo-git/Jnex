@@ -8,6 +8,8 @@ Modular framework for creating web systems.
 
 1-) Create the configuration file called "*jnex.conf*" in **/etc/nginx/sites-available/**
 
+*root@user:/home/user#* **touch /etc/nginx/sites-available/jnex.conf**
+
 2-) Copy and paste the following instructions into the **/etc/nginx/sites-available/jnex.conf** file
 
 ```
