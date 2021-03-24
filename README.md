@@ -6,8 +6,6 @@ Modular framework for creating web systems.
 
 ## Linux
 
-### Terminal
-
 *user@user:~$ su*
 
 *Password:*
