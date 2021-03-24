@@ -6,6 +6,14 @@ Modular framework for creating web systems.
 
 ## Linux
 
+### Terminal
+
+*user@user:~$ su*
+
+*Password:*
+
+*root@user:/home/user#*
+
 1-) Create the configuration file called "*jnex.conf*" in **/etc/nginx/sites-available/**
 
 *root@user:/home/user#* **touch /etc/nginx/sites-available/jnex.conf**
