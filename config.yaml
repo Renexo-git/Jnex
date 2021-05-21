@@ -2,6 +2,7 @@
 application:                                                                   #
 #==============================================================================#
   title    : The name of your application here
+  theme    : classic
   version  : 1.0.0
   port     :
   dev_mode : true
