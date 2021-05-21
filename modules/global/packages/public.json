@@ -1,0 +1,26 @@
+{
+  "dependencies": [
+    "@ericblade/quagga2",
+    "@fortawesome/fontawesome-free",
+    "@popperjs/core",
+    "axios",
+    "bootbox",
+    "bootstrap",
+    "calendarize",
+    "chart.js",
+    "components",
+    "codemirror",
+    "highlight.js",
+    "http",
+    "jquery",
+    "location",
+    "main",
+    "prismjs",
+    "runtime-memcache",
+    "scalc.js",
+    "screen",
+    "summernote",
+    "tabulator-tables",
+    "time"
+  ]
+}

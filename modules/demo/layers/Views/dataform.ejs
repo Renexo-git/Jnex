@@ -1,0 +1,31 @@
+<fieldset>
+  <legend><i class="fa fa-book"></i> <%= i18n("Book Collection") %></legend>
+  <form action="/demo/book/put" class="ajax">
+    <div class="bg-white rounded p-1 ps-2 pe-2">
+      <div class="row ps-2 pe-2">
+          <div class="col-lg-2 p-1">
+            <input type="text" class="form-control" placeholder="<%= i18n('Code') %>" name="code" required>
+          </div>
+          <div class="col-lg-5 p-1">
+            <input type="text" class="form-control" placeholder="<%= i18n('Category') %>" name="category">
+          </div>
+          <div class="col-lg-5 p-1">
+            <input type="text" class="form-control" placeholder="<%= i18n('Title') %>" name="title" required>
+          </div>
+          <div class="col-lg-6 p-1">
+            <input type="text" class="form-control" placeholder="<%= i18n('Author') %>" name="author" required>
+          </div>
+          <div class="col-lg-2 p-1">
+            <input type="text" class="form-control" placeholder="<%= i18n('Year') %>" name="year">
+          </div>
+          <div class="col-lg-4 p-1">
+            <input type="text" class="form-control" placeholder="<%= i18n('Publishing company') %>" name="publishing_company">
+          </div>
+          <div class="col text-center bg-light rounded p-1 m-1">
+            <button type="reset" class="btn btn-secondary m-1"><i class="fa fa-times-circle"></i> <%= i18n("Cancel") %></button>
+            <button type="submit" class="btn btn-primary m-1"><i class="fa fa-save"></i> <%= i18n("Save") %></button>
+          </div>
+      </div>
+    </div>
+  </form>
+</fieldset>
