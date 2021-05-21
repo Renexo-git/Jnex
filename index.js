@@ -253,6 +253,9 @@ server.use(body_parser.urlencoded({extended:false}));
 server.use(body_parser.json());
 server.disable("x-powered-by");
 /*
+
+    TEMPLATE TWIG
+
     const twig = require("twig");
     Object.keys(mvc.view.functions).forEach(name => {
         twig.extendFunction(name, mvc.view.functions[name]);
