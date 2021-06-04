@@ -1,4 +1,5 @@
 modules/**/packages/node_modules
+modules/**/packages/@*
 static/languages
 static/packages
 writable/cache/**/
