@@ -2,6 +2,6 @@ modules/**/packages/node_modules
 modules/**/packages/@*
 static/languages
 static/packages
-writable/.gitkeep
+writable/**/.gitkeep
 writable/cache/**/
 writable/cache/menu.modules.json
