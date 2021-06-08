@@ -18,6 +18,7 @@
     "glob": "^7.1.6",
     "helmet": "^3.21.2",
     "highlight.js": "^10.5.0",
+    "jnex": "^1.0.0",
     "jquery": "^3.5.1",
     "js-yaml": "^3.14.1",
     "magic-globals": "^0.9.1",
