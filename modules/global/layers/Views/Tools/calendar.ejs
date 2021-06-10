@@ -1,9 +1,6 @@
 <script>
-var $calendar   = document.getElementById("calendar");
-var currentYear = new Date().getFullYear();
-var calendarize = new Calendarize();
-calendarize.buildYearCalendar($calendar, currentYear);
-document.getElementById("year").innerHTML = currentYear;
+var calendar = new Calendar();
+calendar.init();
 </script>
 
 <div class="container">
