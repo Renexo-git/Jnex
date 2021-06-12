@@ -61,5 +61,8 @@ server {
 }
 ```
 
+4) renexo@renexo:~$ **cd jnex**
+5) renexo@renexo:~/jnex$ **node index.js**
+
 ### :+1: All ready
 **http://localhost:8080**
