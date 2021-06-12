@@ -6,11 +6,11 @@ Modular framework for creating web systems.
 
 ## Linux
 
-1) renexo@renexo:~$ **cd /path/to/jnex/modules/global/packages/**
-2) renexo@renexo:~/path/to/jnex/modules/global/packages$ **npm install**
+1) renexo@renexo:~$ **cd jnex/modules/global/packages**
+2) renexo@renexo:~/jnex/modules/global/packages$ **npm install**
 3) Configure Nginx proxy
 
-# Nginx - Proxy configuration
+### Nginx - Proxy configuration
 
 File: **/etc/nginx/sites-available/jnex.conf**
 
