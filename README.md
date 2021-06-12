@@ -9,7 +9,7 @@ Modular framework for creating web systems.
 - Nginx
 - Node.js (v10 +)
 
-## Linux
+### Linux
 
 1) renexo@renexo:~$ **cd jnex/modules/global/packages**
 2) renexo@renexo:~/jnex/modules/global/packages$ **npm install**
