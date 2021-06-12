@@ -5,7 +5,7 @@ Modular framework for creating web systems.
 # INSTALL
 
 **Requirements:**
-- DBMS (Data Base Management System) supported by [Sequelize](https://sequelize.org) ORM.
+- DBMS (Data Base Management System) supported by [Sequelize](https://sequelize.org) ORM or MongoDB.
 - Nginx
 - Node.js (v10 +)
 
