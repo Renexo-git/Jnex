@@ -4,21 +4,15 @@ Modular framework for creating web systems.
 
 # Nginx - Proxy configuration
 
-## Linux
+File: **/etc/nginx/sites-available/jnex.conf**
 
-*user@user:~$ su*
+Change according to your settings:
 
-*Password:*
-
-*root@user:/home/user#*
-
-1-) Create the configuration file called "*jnex.conf*" in **/etc/nginx/sites-available/**
-
-*root@user:/home/user#* **touch /etc/nginx/sites-available/jnex.conf**
-
-2-) Copy and paste the following instructions into the **/etc/nginx/sites-available/jnex.conf** file
+- server **127.0.0.1:3000**;
+- alias **/path/to/jnex/static/**$1;
 
 ```
+
 upstream server {
 
     server 127.0.0.1:3000;
@@ -30,7 +24,6 @@ server {
     listen 8080 default_server;
     listen [::]:8080 default_server;
     server_name _;
-    set $SYS_ROOT /var/www/jnex;
 
     location / {
         proxy_http_version 1.1;
@@ -48,7 +41,7 @@ server {
     }
 
     location ~ ^/static/(.*)$ {
-        alias $SYS_ROOT/static/$1;
+        alias /path/to/jnex/static/$1;
     }
 
     location ~ /\.ht {
@@ -57,13 +50,6 @@ server {
 
 }
 ```
-3-) Create the symbolic link:
-
-*root@user:/home/user#* **ln -s /etc/nginx/sites-available/jnex.conf /etc/nginx/sites-enabled/**
-
-4-) Restart the web server:
-
-*root@user:/home/user#* **/etc/init.d/nginx restart**
 
 ### :+1: All ready
 **http://localhost:8080**
