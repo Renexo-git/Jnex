@@ -57,7 +57,7 @@ server {
 }
 ```
 
-4) configure the file: **/path/to/jnex/config.yaml**
+4) configure the file: **jnex/config.yaml**
 5) renexo@renexo:~$ **cd jnex**
 6) renexo@renexo:~/jnex$ **node index.js**
 
