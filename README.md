@@ -16,7 +16,7 @@ Modular framework for creating web systems.
 
 File: **/etc/nginx/sites-available/jnex.conf**
 
-Change according to your settings:
+Change according to your needs:
 
 - server **127.0.0.1:3000**;
 - alias **/path/to/jnex/static/**$1;
