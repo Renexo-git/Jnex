@@ -4,7 +4,7 @@ Modular framework for creating web systems.
 
 # INSTALL
 
-**Requirements: Node.js (v10 +)**
+**Requirements: Nginx - Node.js (v10 +)**
 
 ## Linux
 
