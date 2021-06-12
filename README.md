@@ -10,11 +10,7 @@ Modular framework for creating web systems.
 
 1) renexo@renexo:~$ **cd jnex/modules/global/packages**
 2) renexo@renexo:~/jnex/modules/global/packages$ **npm install**
-3) Configure Nginx proxy
-
-### Nginx - Proxy configuration
-
-File: **/etc/nginx/sites-available/jnex.conf**
+3) Configure Nginx proxy: **/etc/nginx/sites-available/jnex.conf**
 
 Change according to your needs:
 
