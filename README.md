@@ -57,8 +57,9 @@ server {
 }
 ```
 
-4) renexo@renexo:~$ **cd jnex**
-5) renexo@renexo:~/jnex$ **node index.js**
+4) configure the file: **/path/to/jnex/config.yaml**
+5) renexo@renexo:~$ **cd jnex**
+6) renexo@renexo:~/jnex$ **node index.js**
 
 ### :+1: All ready
 **http://localhost:8080**
