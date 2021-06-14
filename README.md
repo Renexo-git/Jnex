@@ -16,10 +16,10 @@ Modular framework for creating web systems.
 3) renexo@renexo:~/jnex$ **node index.js**
 
 ---
-### => *Packages are automatically installed on first run.*
+#### *Packages are automatically installed on first run.*
 ---
 
-#### Configure Nginx proxy
+### Configure Nginx proxy
 
 File: **/etc/nginx/sites-available/jnex.conf**
 
