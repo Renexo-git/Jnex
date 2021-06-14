@@ -15,9 +15,11 @@ Modular framework for creating web systems.
 2) renexo@renexo:~$ **cd jnex**
 3) renexo@renexo:~/jnex$ **node index.js**
 
-Configure Nginx proxy: **/etc/nginx/sites-available/jnex.conf**
+#### Configure Nginx proxy:
 
 *Change according to your needs:*
+
+File: **/etc/nginx/sites-available/jnex.conf**
 
 - server **127.0.0.1:3000**;
 - alias **/path/to/jnex/static/**$1;
