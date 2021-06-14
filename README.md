@@ -19,7 +19,7 @@ Modular framework for creating web systems.
 #### *Packages are automatically installed on first run.*
 ---
 
-### Configure Nginx proxy
+### Nginx Proxy
 
 File: **/etc/nginx/sites-available/jnex.conf**
 
