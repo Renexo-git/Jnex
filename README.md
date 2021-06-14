@@ -19,7 +19,7 @@ Modular framework for creating web systems.
 #### *Packages are automatically installed on first run.*
 ---
 
-### Nginx
+### Nginx Proxy
 
 File: **/etc/nginx/sites-available/proxy.conf**
 
