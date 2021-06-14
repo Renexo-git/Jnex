@@ -19,14 +19,9 @@ Modular framework for creating web systems.
 #### *Packages are automatically installed on first run.*
 ---
 
-### Nginx Proxy
+### Nginx
 
-File: **/etc/nginx/sites-available/jnex.conf**
-
-*Change according to your needs:*
-
-- server **127.0.0.1:3000**;
-- alias **/path/to/jnex/static/**$1;
+File: **/etc/nginx/sites-available/proxy.conf**
 
 ```
 upstream server {
