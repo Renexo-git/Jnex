@@ -57,7 +57,8 @@ server {
         deny all;
     }
 
-}```
+}
+```
 
 ### :+1: All ready
 **http://localhost:8080**
