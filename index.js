@@ -5,5 +5,5 @@
  * @copyright  2021 Renexo
  * @license    MIT License
  */
-const jnex = require("./modules/global/packages/node_modules/jnex");
+const jnex = require("./modules/global/packages");
 jnex();
