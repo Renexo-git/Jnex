@@ -11,9 +11,11 @@ Modular framework for creating web systems.
 
 ### Linux
 
-1) renexo@renexo:~$ **cd jnex/modules/global/packages**
-2) renexo@renexo:~/jnex/modules/global/packages$ **npm install**
-3) Configure Nginx proxy: **/etc/nginx/sites-available/jnex.conf**
+1) configure the file: **jnex/config.yaml**
+2) renexo@renexo:~$ **cd jnex**
+3) renexo@renexo:~/jnex$ **node index.js**
+
+Configure Nginx proxy: **/etc/nginx/sites-available/jnex.conf**
 
 *Change according to your needs:*
 
@@ -21,9 +23,7 @@ Modular framework for creating web systems.
 - alias **/path/to/jnex/static/**$1;
 
 ```
-
 upstream server {
-
     server 127.0.0.1:3000;
     keepalive 64;
 }
@@ -59,10 +59,5 @@ server {
 
 }
 ```
-
-4) configure the file: **jnex/config.yaml**
-5) renexo@renexo:~$ **cd jnex**
-6) renexo@renexo:~/jnex$ **node index.js**
-
 ### :+1: All ready
 **http://localhost:8080**
