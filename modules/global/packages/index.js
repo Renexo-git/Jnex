@@ -1,7 +1,11 @@
 try {
-    module.exports = require("./node_modules/jnex");
+    module.exports = {
+        jnex: require("./node_modules/jnex")
+    };
 } catch(err) {
-    module.exports = () => "";
+    module.exports = {
+        jnex: () => ""
+    };
     if (err.code === "MODULE_NOT_FOUND") {
         console.clear();
         console.log("Installing packages from the global module...");
