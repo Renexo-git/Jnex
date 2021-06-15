@@ -1,29 +1,34 @@
 # ------------------------------------------------------------------------------
-# Application
+# Application |
 # ------------------------------------------------------------------------------
-application  :
-  title      : The name of your application here
-  language   : pt-BR
-  charset    :
-  version    : 1.0.0
-  port       :
-  dev_mode   : true
+application   :
+  title       : The name of your application here
+  language    : pt-BR
+  charset     :
+  version     : 1.0.0
+  dev_mode    : true
 # ------------------------------------------------------------------------------
-# Connection
+# Server      |
 # ------------------------------------------------------------------------------
-connection   :
-  driver     : mysql
-  host       : localhost
-  port       :
-  username   : jnex
-  password   :
-  database   : jnex
-  charset    : utf8
-  collate    : utf8_unicode_ci
-  # MongoDB --------------------------------------------------------------------
-  mongodb    :
-    host     : localhost
-    port     :
-    username :
-    password :
-    database :
+server        :
+  port        :
+  static_dir  : true
+# ------------------------------------------------------------------------------
+# Connection  |
+# ------------------------------------------------------------------------------
+connection    :
+  driver      : mysql
+  host        : localhost
+  port        :
+  username    : jnex
+  password    :
+  database    : jnex
+  charset     : utf8
+  collate     : utf8_unicode_ci
+  # MongoDB   |-----------------------------------------------------------------
+  mongodb     :
+    host      : localhost
+    port      :
+    username  :
+    password  :
+    database  :
