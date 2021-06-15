@@ -18,12 +18,12 @@ class System extends Controller {
         data["total"] = 0;
         data["menu"]  = require(CACHE_PATH + "/menu.modules.json");
         return view("Layout/main", data);
-        model("Demo").countRecord().then(result => {
+        /*model("Demo").countRecord().then(result => {
             data["total"] = result.count;
             return view("Layout/main", data);
         }).catch(error => {
             console.log(error);
-        });
+        });*/
     }
 
     /**
