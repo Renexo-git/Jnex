@@ -1,4 +1,4 @@
-class System extends Controller {
+class Global extends Controller {
 
     /**
      * Class constructor.
@@ -6,7 +6,7 @@ class System extends Controller {
      */
     constructor() {
         super();
-        //this.model = model("System");
+        //this.model = model("Global");
     }
 
     /**
@@ -14,7 +14,7 @@ class System extends Controller {
      * @param {Array} data
      * @access public
      */
-    main(data) {
+    dashboard(data) {
         data["total"] = 0;
         data["menu"]  = require(CACHE_PATH + "/menu.modules.json");
         return view("Layout/main", data);
@@ -24,14 +24,6 @@ class System extends Controller {
         }).catch(error => {
             console.log(error);
         });*/
-    }
-
-    /**
-     * System status
-     * @access public
-     */
-    status() {
-        return view("Information/status");
     }
 
     /**
