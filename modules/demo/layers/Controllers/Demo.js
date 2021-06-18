@@ -28,6 +28,16 @@ class Demo extends BaseController {
     }
 
     /**
+     * Returns total records.
+     * @access public
+     */
+    count() {
+        this.model.countRecord().then(result => {
+            return view("@json", {"total": result.count});
+        });
+    }
+
+    /**
      * Basic SQL operations.
      * @access public
      */

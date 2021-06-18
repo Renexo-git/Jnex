@@ -4,7 +4,7 @@
 | ------------------------------------------------------------------------------
 */
 Route.get("/", (req, res) => {
-    controller("Global").dashboard();
+    controller("Global").index(res.data);
 });
 Route.get("/calendar", (req, res) => {
     controller("Global").calendar();
