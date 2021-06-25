@@ -1,7 +1,7 @@
 /**
  * Jnex - Modular framework for creating web systems.
  *
- * @author     Renexo
+ * @author     Renexo <contato@renexo.com.br> Brasil
  * @copyright  2021 Renexo
  * @license    MIT License
  */
