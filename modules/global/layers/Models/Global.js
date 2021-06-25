@@ -8,3 +8,4 @@ class Global extends Model {
         super();
     }
 }
+module.exports = Global;

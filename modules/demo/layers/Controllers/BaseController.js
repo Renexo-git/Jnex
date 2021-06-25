@@ -8,3 +8,4 @@ class BaseController extends Controller {
         super();
     }
 }
+module.exports = BaseController;

@@ -14,8 +14,10 @@ class Global extends Controller {
      * @access public
      */
     index(data) {
-        data["total"] = $("api").get("/demo/book/count").total;
-        return view("Layout/main", data);
+        $("api").request("/demo/book/count").then(response => {
+            data["total"] = response.total;
+            return view("Layout/main", data);
+        });
     }
 
     /**
@@ -26,3 +28,4 @@ class Global extends Controller {
         return view("Tools/calendar");
     }
 }
+module.exports = Global;

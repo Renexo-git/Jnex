@@ -1,4 +1,4 @@
-include("BaseController.js");
+const BaseController = require("BaseController");
 
 class Demo extends BaseController {
 
@@ -61,3 +61,4 @@ class Demo extends BaseController {
         }
     }
 }
+module.exports = Demo;

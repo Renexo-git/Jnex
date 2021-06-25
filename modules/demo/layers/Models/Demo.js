@@ -94,3 +94,4 @@ class Demo extends Model {
         return this.findAndCountAll();
     }
 }
+module.exports = Demo;
