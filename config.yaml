@@ -17,10 +17,10 @@ server        :
 # Connection  |
 # ------------------------------------------------------------------------------
 connection    :
-  driver      : mysql
+  driver      : sqlite
   host        : localhost
   port        :
-  username    : jnex
+  username    :
   password    :
   database    : jnex
   charset     : utf8
