@@ -16,6 +16,11 @@ class Demo extends BaseController {
      * @access public
      */
     datagrid() {
+        this.model.countRecord().then(result => {
+            if (result.count === 0) {
+                this.model.data();
+            }
+        });
         return view("datagrid");
     }
 
