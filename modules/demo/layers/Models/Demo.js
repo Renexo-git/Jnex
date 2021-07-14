@@ -6,7 +6,7 @@ class Demo extends Model {
      */
     constructor() {
         super();
-        this.define("book", {
+        this.book = this.sequelize.define("book", {
           code: {
             type: Sequelize.STRING,
             allowNull: false,
@@ -38,15 +38,15 @@ class Demo extends Model {
             type: Sequelize.STRING
           }
         });
-        this.sync();
+        this.book.sync();
     }
 
     /**
-     * Sample data.
+     * Creates multiple lines at once.
      * @access public
      */
     data() {
-        this.bulkCreate([{
+        this.book.bulkCreate([{
             code: "A001",
             category: "Tecnologia",
             title: "Banco de Dados",
@@ -151,11 +151,9 @@ class Demo extends Model {
      */
     selectRecord(query = "") {
         if (query) {
-            return this.findAll({
-                where: query
-            });
+            return this.book.findAll({ where: query });
         }
-        return this.findAll();
+        return this.book.findAll();
     }
 
     /**
@@ -165,13 +163,29 @@ class Demo extends Model {
      */
     putRecord(data) {
         if (data.id) {
-            return this.update(data, {
-                where: {
-                    id: data.id
+            return this.book.update(data, {
+                where: { id: data.id }
+            }).then(result => {
+                if (result) {
+                    return true;
+                } else {
+                    return false;
                 }
+            }).catch(error => {
+                this.error(error["message"]);
+                return false;
             });
         }
-        return this.create(data);
+        return this.book.create(data).then(result => {
+            if (result) {
+                return true;
+            } else {
+                return false;
+            }
+        }).catch(error => {
+            this.error(error["message"]);
+            return false;
+        });
     }
 
     /**
@@ -180,12 +194,21 @@ class Demo extends Model {
      * @access public
      */
     deleteRecord(id) {
-        return this.destroy({
+        return this.book.destroy({
             where: {
                 id: {
                     [Sequelize.Op.in]: id.split(",").map(item => item)
                 }
             }
+        }).then(result => {
+            if (result) {
+                return true;
+            } else {
+                return false;
+            }
+        }).catch(error => {
+            this.error(error["message"]);
+            return false;
         });
     }
 
@@ -194,7 +217,7 @@ class Demo extends Model {
      * @access public
      */
     countRecord() {
-        return this.findAndCountAll();
+        return this.book.findAndCountAll();
     }
 }
 module.exports = Demo;
