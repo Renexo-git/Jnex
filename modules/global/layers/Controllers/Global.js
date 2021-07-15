@@ -15,7 +15,7 @@ class Global extends Controller {
      */
     index(data) {
         $("api").request("/demo/book/count").then(response => {
-            data["total"] = response.total;
+            data["count"] = response.count;
             return view("Layout/main", data);
         });
     }
