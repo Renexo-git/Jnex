@@ -7,11 +7,9 @@ Route.get("/", (req, res) => {
     controller("Demo").datagrid();
 });
 Route.get("/book", (req, res) => {
-    controller("Demo").dataform();
+    controller("Demo").register();
 });
-Route.get("/book/count", (req, res) => {
-    controller("Demo").count();
-});
-Route.all("/book/:action/:id?", (req, res) => {
-    controller("Demo").crud(req.params.action, req.params.id, req.body);
+Route.all("/book/:option/:query?", (req, res) => {
+    let query = (Object.keys(req.body).length !== 0) ? req.body : req.query;
+    controller("Demo").action(req.params.option, query);
 });

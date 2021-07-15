@@ -1,6 +1,6 @@
 <fieldset>
   <legend><i class="fa fa-book"></i> <%= i18n("Book Collection") %></legend>
-  <datagrid action="/demo/book">
+  <datagrid getdata="/demo/book/get" deldata="/demo/book/del" register="/demo/book">
     <column name="code" width="150"><%= i18n("Code") %></column>
     <column name="category" align="left"><%= i18n("Category") %></column>
     <column name="title"><%= i18n("Title") %></column>

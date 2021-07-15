@@ -16,11 +16,6 @@ class Demo extends BaseController {
      * @access public
      */
     datagrid() {
-        this.model.countRecord().then(result => {
-            if (result.count === 0) {
-                this.model.data();
-            }
-        });
         return view("datagrid");
     }
 
@@ -28,38 +23,40 @@ class Demo extends BaseController {
      * Returns the data form.
      * @access public
      */
-    dataform() {
+    register() {
         return view("dataform");
     }
 
     /**
-     * Returns total records.
+     * Database operations.
+     *
+     * @param {String} option
+     * @param {Object} query
      * @access public
      */
-    count() {
-        this.model.countRecord().then(result => {
-            return view("@json", {"total": result.count});
-        });
-    }
-
-    /**
-     * Basic SQL operations.
-     * @access public
-     */
-    crud(action, id, data) {
-        switch(action) {
-          case "select":
-            this.model.selectRecord(parseInt(id)).then(result => {
+    action(option, query) {
+        switch(option) {
+          case "get":
+            this.model.select(query).then(result => {
                 return view("@json", result);
+            });
+            break;
+          case "count":
+            this.model.count().then(result => {
+                if (result.count === 0) {
+                    // Add example data.
+                    this.model.data();
+                }
+                return view("@json", { "count": result.count });
             });
             break;
           case "put":
-            this.model.putRecord(data).then(result => {
+            this.model.insert(query).then(result => {
                 return view("@json", result);
             });
             break;
-          case "delete":
-            this.model.deleteRecord(id).then(result => {
+          case "del":
+            this.model.destroy(query).then(result => {
                 return view("@json", result);
             });
             break;

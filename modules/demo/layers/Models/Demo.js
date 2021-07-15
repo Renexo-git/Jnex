@@ -146,10 +146,10 @@ class Demo extends Model {
 
     /**
      * Select records in the database.
-     * @param {String} query
+     * @param {Object} query
      * @access public
      */
-    selectRecord(query = "") {
+    select(query) {
         if (query) {
             return this.book.findAll({ where: query });
         }
@@ -157,14 +157,22 @@ class Demo extends Model {
     }
 
     /**
-     * Insert and update records.
-     * @param {Array} data
+     * Count records in the database.
      * @access public
      */
-    putRecord(data) {
-        if (data.id) {
-            return this.book.update(data, {
-                where: { id: data.id }
+    count() {
+        return this.book.findAndCountAll();
+    }
+
+    /**
+     * Create and update records.
+     * @param {Object} query
+     * @access public
+     */
+    insert(query) {
+        if (query.id) {
+            return this.book.update(query, {
+                where: { id: query.id }
             }).then(result => {
                 if (result) {
                     return true;
@@ -176,7 +184,7 @@ class Demo extends Model {
                 return false;
             });
         }
-        return this.book.create(data).then(result => {
+        return this.book.create(query).then(result => {
             if (result) {
                 return true;
             } else {
@@ -190,14 +198,14 @@ class Demo extends Model {
 
     /**
      * Delete records in the database by ID.
-     * @param {String} id "1,2,3..."
+     * @param {Object} query
      * @access public
      */
-    deleteRecord(id) {
+    destroy(query) {
         return this.book.destroy({
             where: {
-                id: {
-                    [Sequelize.Op.in]: id.split(",").map(item => item)
+                id: { // Route: /demo/book/del/?id=1,2,3...
+                    [Sequelize.Op.in]: query.id.split(",").map(item => item)
                 }
             }
         }).then(result => {
@@ -210,14 +218,6 @@ class Demo extends Model {
             this.error(error["message"]);
             return false;
         });
-    }
-
-    /**
-     * Count records in the database.
-     * @access public
-     */
-    countRecord() {
-        return this.book.findAndCountAll();
     }
 }
 module.exports = Demo;
