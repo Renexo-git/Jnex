@@ -1,11 +1,11 @@
 <fieldset>
   <legend><i class="fa fa-book"></i> <%= i18n("Book Collection") %></legend>
-  <datagrid getdata="/demo/book/get" deldata="/demo/book/del" register="/demo/book">
-    <column name="code" width="150"><%= i18n("Code") %></column>
-    <column name="category" align="left"><%= i18n("Category") %></column>
-    <column name="title"><%= i18n("Title") %></column>
-    <column name="author" align="center"><%= i18n("Author") %></column>
-    <column name="year" align="center"><%= i18n("Year") %></column>
-    <column name="publishing_company" align="center"><%= i18n("Publishing company") %></column>
-  </datagrid>
+  <jnex-datagrid getdata="/demo/book/get" deldata="/demo/book/del" register="/demo/book">
+    <column-data name="code" width="150"><%= i18n("Code") %></column-data>
+    <column-data name="category" align="left"><%= i18n("Category") %></column-data>
+    <column-data name="title"><%= i18n("Title") %></column-data>
+    <column-data name="author" align="center"><%= i18n("Author") %></column-data>
+    <column-data name="year" align="center"><%= i18n("Year") %></column-data>
+    <column-data name="publishing_company" align="center"><%= i18n("Publishing company") %></column-data>
+  </jnex-datagrid>
 </fieldset>
