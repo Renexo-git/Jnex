@@ -1,6 +1,28 @@
+<script>
+function request(error, response) {
+    if (!error) {
+        if (response.data === true) {
+            dialog.alert(`${icon("success", "3x")}
+                          <h4 class="mt-2 text-secondary">
+                          ${i18n("Saved successfully")}
+                          </h4>`, event => {
+                response.reset(); // Reset form
+                ajax("/demo"); // Redirect
+            });
+        } else {
+            dialog.alert(`${icon("danger", "3x")}
+                          <h4 class="mt-2 text-secondary">
+                          ${i18n("It wasn't possible to save")}
+                          </h4>`);
+        }
+    }
+}
+</script>
+
 <fieldset>
   <legend><i class="fa fa-book"></i> <%= i18n("Book Collection") %></legend>
-  <form action="/demo/book/put" reset="true" class="ajax">
+  <!-- invoke a function passing just its name in the "return" attribute -->
+  <form action="/demo/book/put" return="request" class="ajax">
     <div class="bg-white rounded p-1 ps-2 pe-2">
       <div class="row ps-2 pe-2">
           <div class="col-lg-2 p-1">
