@@ -1,19 +1,21 @@
 <script>
 function request(error, response) {
+    let text = [];
+    text["success"] = "Saved successfully!";
+    text["danger"]  = "It wasn't possible to save!";
+    let message = type =>
+                  `${icon(type, "2x")}
+                   <h5 class="mt-3 text-secondary">
+                   ${i18n(text[type])}
+                   </h5>`;
     if (!error) {
         if (response.data === true) {
-            dialog.alert(`${icon("success", "3x")}
-                          <h4 class="mt-2 text-secondary">
-                          ${i18n("Saved successfully")}
-                          </h4>`, event => {
+            dialog.alert(message("success"), event => {
                 response.reset(); // Reset form
                 ajax("/demo"); // Redirect
             });
         } else {
-            dialog.alert(`${icon("danger", "3x")}
-                          <h4 class="mt-2 text-secondary">
-                          ${i18n("It wasn't possible to save")}
-                          </h4>`);
+            dialog.alert(message("danger"));
         }
     }
 }
