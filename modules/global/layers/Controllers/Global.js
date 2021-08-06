@@ -14,7 +14,7 @@ class Global extends Controller {
      * @access public
      */
     index(data) {
-        $("api").request("/demo/book/count").then(response => {
+        $("http").get("/demo/book/count").then(response => {
             data["count"] = response.count;
             return view("Layout/main", data);
         });
