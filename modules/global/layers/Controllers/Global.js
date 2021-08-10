@@ -17,8 +17,8 @@ class Global extends Controller {
      */
     index(data) {
         const book = require("@demo/book");
-        book.count().then(result => {
-            data["count"] = result.count;
+        book(count => {
+            data["count"] = count;
             return view("Layout/main", data);
         });
     }
