@@ -23,35 +23,21 @@ class Demo extends BaseController {
      * Returns the data form.
      * @access public
      */
-    register() {
+    dataform() {
         return view("dataform");
     }
 
     /**
      * Database operations.
      *
-     * @param {String} option
+     * @param {String} operation
      * @param {Object} data
      * @access public
      */
-    action(option, data) {
-        switch(option) {
-          case "get":
-            this.model.select(data).then(result => {
-                return view("@json", result);
-            });
-            break;
-          case "put":
-            this.model.insert(data).then(result => {
-                return view("@json", result);
-            });
-            break;
-          case "del":
-            this.model.destroy(data).then(result => {
-                return view("@json", result);
-            });
-            break;
-        }
+    crud(operation, data) {
+        this.model[operation](data).then(result => {
+            return view("@json", result);
+        });
     }
 }
 module.exports = Demo;

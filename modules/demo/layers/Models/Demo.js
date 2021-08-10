@@ -54,7 +54,7 @@ class Demo extends Model {
      * @param {Object} data
      * @access public
      */
-    select(data) {
+    get(data) {
         return data
         ? this.book.findAll({ where: data })
         : this.book.findAll();
@@ -75,7 +75,7 @@ class Demo extends Model {
      * @param {Object} data
      * @access public
      */
-    insert(data) {
+    put(data) {
         if (data.id) {
             return this.book.update(data, {
                 where: { id: data.id }
@@ -96,7 +96,7 @@ class Demo extends Model {
      * @param {Object} data
      * @access public
      */
-    destroy(data) {
+    del(data) {
         return this.book.destroy({
             where: {
                 id: { // Route: /demo/book/del/?id=1,2,3...
