@@ -31,32 +31,23 @@ class Demo extends BaseController {
      * Database operations.
      *
      * @param {String} option
-     * @param {Object} query
+     * @param {Object} data
      * @access public
      */
-    action(option, query) {
+    action(option, data) {
         switch(option) {
           case "get":
-            this.model.select(query).then(result => {
+            this.model.select(data).then(result => {
                 return view("@json", result);
             });
             break;
-          case "count":
-            this.model.count().then(result => {
-                if (result.count === 0) {
-                    // Add example data.
-                    this.model.data();
-                }
-                return view("@json", { "count": result.count });
-            });
-            break;
           case "put":
-            this.model.insert(query).then(result => {
+            this.model.insert(data).then(result => {
                 return view("@json", result);
             });
             break;
           case "del":
-            this.model.destroy(query).then(result => {
+            this.model.destroy(data).then(result => {
                 return view("@json", result);
             });
             break;

@@ -11,11 +11,14 @@ class Global extends Controller {
 
     /**
      * Index
+     *
+     * @param {Object} data
      * @access public
      */
     index(data) {
-        $("http").get("/demo/book/count").then(response => {
-            data["count"] = response.count;
+        const book = require("@demo/book");
+        book.count().then(result => {
+            data["count"] = result.count;
             return view("Layout/main", data);
         });
     }
